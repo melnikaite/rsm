@@ -33,8 +33,12 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-sinatra'
-  gem "rspec-rails"
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+gem "capybara"
 
 group :production do
   gem 'therubyracer-heroku', '0.8.1.pre3'
@@ -42,5 +46,3 @@ group :production do
 end
 
 gem 'rake', '~> 0.9.2'
-
-
